@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff2c2f33),
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -31,6 +32,7 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
+                      color: Colors.white
                     ),
                   ),
                   SizedBox(
@@ -44,13 +46,14 @@ class HomePage extends StatelessWidget {
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
+                    color: Color(0xff51565f),
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     // defining the shape
                     shape: RoundedRectangleBorder(
                         side: BorderSide(
-                            color: Colors.black
+                            color: Color(0xff51565f),
                         ),
                         borderRadius: BorderRadius.circular(50)
                     ),
@@ -58,7 +61,8 @@ class HomePage extends StatelessWidget {
                       "Login",
                       style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 18
+                          fontSize: 18,
+                          color: Colors.white
                       ),
                     ),
                   ),
@@ -70,7 +74,7 @@ class HomePage extends StatelessWidget {
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
                     },
-                    color: Color(0xff0095FF),
+                    color: Color(0xff7289da),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50)
                     ),
@@ -78,7 +82,7 @@ class HomePage extends StatelessWidget {
                       "Sign up",
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.bold,
                           fontSize: 18
                       ),
                     ),
