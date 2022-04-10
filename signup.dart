@@ -6,18 +6,18 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff2c2f33),
       resizeToAvoidBottomInset: true,
-      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xff2c2f33),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
           icon: Icon(Icons.arrow_back_ios,
             size: 20,
-            color: Colors.black,),
+            color: Colors.white70,),
         ),
       ),
       body: SingleChildScrollView(
@@ -33,13 +33,14 @@ class SignupPage extends StatelessWidget {
                   Text("Sign up",
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),),
                   SizedBox(height: 20,),
                   Text("Create an account, It's free ",
                     style: TextStyle(
                         fontSize: 15,
-                        color:Colors.grey[700]),)
+                        color:Colors.white70),)
                 ],
               ),
               Column(
@@ -58,7 +59,7 @@ class SignupPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => List()));
                   },
-                  color: Color(0xff0095FF),
+                  color: Color(0xff7289da),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
@@ -75,14 +76,15 @@ class SignupPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Already have an account?"),
+                  Text("Already have an account?", style: TextStyle(color: Colors.white),),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                   child: Text(" Login", style:TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white
                   ),
                   )
                   ),
@@ -104,7 +106,7 @@ Widget inputFile({label, obscureText = false}) {
         style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w400,
-            color:Colors.black87
+            color:Colors.white
         ),
       ),
       SizedBox(
